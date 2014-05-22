@@ -2,6 +2,23 @@
 <p>Face up cards</p>
 
 <p>Result of all rounds</p>
-Columns: Round, Winner, Money, More
-<br>
-Buttons: Continue (/new), End Game (/)
+<table class ="table">
+	<thead>
+		<tr>
+			<td>Round</td>
+			<td>Winner</td>
+			<td>Money</td>
+		</tr>
+	</thead>
+	<tbody>
+		<% @players.each do |player| %>
+		<tr>
+			<td>1</td>
+			<td>win</td>
+			<td><%= player.p1_bet %></td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+<%= link_to 'Continue', new_player_path %>
+<%= link_to 'End Game', root_path %> 
