@@ -1,2 +1,12 @@
-<h1>Players#index</h1>
-<p>Find me in app/views/players/index.html.erb</p>
+<h1>Start a New Game</h1>
+<%= form_for @player do |f| %>
+	<%= f.label :p1_name %>
+	<%= f.text_field :p1_name %>
+	<br/>
+	<%= f.label :p2_name %>
+	<%= f.text_field :p2_name %>
+	<br/>
+	<%= f.submit 'Start Game' %>
+<% end %>
+
+	

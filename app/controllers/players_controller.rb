@@ -4,6 +4,9 @@ class PlayersController < ApplicationController
   end
   def play
   	@player = Player.new
+	@player.p1_name = params[:player][:p1_name]
+	@player.p2_name = params[:player][:p2_name]
+	@player.save!
   end
   def round
   	@player = Player.new
