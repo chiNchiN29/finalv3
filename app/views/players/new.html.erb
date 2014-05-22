@@ -3,10 +3,10 @@
 
 <%= form_for @player do |f| %>
 	<h2>Bet of Player 1</h2>
-	<%= f.text_field :p1_bet %>
+	<%= f.number_field :p1_bet %><%= f.select :p1card, [['1','1'],['2','2'],['3','3']] %>
 	<br/>	
 	<h2>Bet of Player 2</h2>
-	<%= f.text_field :p2_bet %>
+	<%= f.number_field :p2_bet %><%= f.select :p2card, [['1','1'],['2','2'],['3','3']] %>
 	<br/>
 	<%= f.submit 'Make bet!' %>
 <% end %>

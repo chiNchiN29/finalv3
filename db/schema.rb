@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140522063143) do
+ActiveRecord::Schema.define(version: 20140522082104) do
 
   create_table "players", force: true do |t|
     t.integer  "round"
@@ -26,6 +26,8 @@ ActiveRecord::Schema.define(version: 20140522063143) do
     t.string   "winner"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "p1card"
+    t.string   "p2card"
   end
 
 end
