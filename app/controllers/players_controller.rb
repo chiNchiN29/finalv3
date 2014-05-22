@@ -4,6 +4,7 @@ class PlayersController < ApplicationController
   end
 
   def round
+  	@players = Player.new
   end
 
   def result
