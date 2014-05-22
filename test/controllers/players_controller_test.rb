@@ -6,18 +6,18 @@ class PlayersControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should get round" do
-    get :round
+  test "should get create" do
+    get :create
     assert_response :success
   end
 
-  test "should get result" do
-    get :result
+  test "should get new" do
+    get :new
     assert_response :success
   end
 
-  test "should get summary" do
-    get :summary
+  test "should get show" do
+    get :show
     assert_response :success
   end
 

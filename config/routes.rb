@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 	
+  get 'players/index'
+
+  get 'players/create'
+
+  get 'players/new'
+
+  get 'players/show'
+
 	resources :players
 	root 'pages#index' # get '/' => 'pages#index'
 		get '/help' => 'pages#help'
