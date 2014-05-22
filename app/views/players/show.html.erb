@@ -13,9 +13,9 @@ Buttons: Back (/index)
 	<tbody>
 		<tr>
 			<td>1</td>
-			<td>Player 1</td>
-			<td>Win</td>
-			<td><%= @player.p1_bet %></td>
+			<td ROWSPAN="2">Player 1<br>Player2</td>
+			<td ROWSPAN="2">Win<br>Lose</td>
+			<td ROWSPAN="2"><%= @player.p1_bet %><br><%= @player.p2_bet %></td>
 		</tr>
 	</tbody>
 </table>
