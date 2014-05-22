@@ -1,3 +1,25 @@
 <h1>Show details per round</h1>
 <p>Round, Player name, win/lose, money +/-</p>
 Buttons: Back (/index)
+<table class ="table">
+	<thead>
+		<tr>
+			<td>Round</td>
+			<td>Player</td>
+			<td>Results</td>
+			<td>Money</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>1</td>
+			<td>Player 1</td>
+			<td>Win</td>
+			<td><%= @user.p1_bet %></td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+<%= link_to 'Back', players_path %>
+		
+	
