@@ -1,4 +1,14 @@
-<h1>Game play here</h1>
+<h1>Let's play!!!!!!!</h1>
 <p>3 cards, face down, each player has 3 forms for bet</p>
+
+<%= form_for @player do |f| %>
+	<h2>Bet of Player 1</h2>
+	<%= f.text_field :p1_bet %>
+	<br/>	
+	<h2>Bet of Player 2</h2>
+	<%= f.text_field :p2_bet %>
+	<br/>
+	<%= f.submit 'Make bet!' %>
+<% end %>
 
 <p>Buttons: Bet!</p>
