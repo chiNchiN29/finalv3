@@ -5,16 +5,14 @@ class PlayersController < ApplicationController
 
   def play
   	@player = Player.new
-	@player.p1_name = params[:player][:p1_name]
-	@player.p2_name = params[:player][:p2_name]
-	@player.save!
   end
   
-  def round
+  def create
   	@player = Player.new
   	#@player.p1_name = 
   	#@player.p2_name = 
-
+	@player.p1_name = params[:player][:p1_name]
+	@player.p2_name = params[:player][:p2_name]
   	@player.p1_bet = params[:player][:p1_bet1]
   	@player.p2_bet = params[:player][:p1_bet1]
   	#@player.p2_money = 
@@ -25,6 +23,7 @@ class PlayersController < ApplicationController
 
   def result
   	@player = Player.find(params[:id])
+
   end
 
   def summary
