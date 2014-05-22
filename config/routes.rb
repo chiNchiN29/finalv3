@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'players/index'
+
+  get 'players/round'
+
+  get 'players/result'
+
+  get 'players/summary'
+
 	root 'pages#index' # get '/' => 'pages#index'
 		get '/help' => 'pages#help'
   # The priority is based upon order of creation: first created -> highest priority.
