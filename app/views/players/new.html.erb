@@ -1,15 +1,14 @@
-<h1>Let's play!!!!!!!</h1>
-<p>3 cards, face down, each player has 3 forms for bet</p>
-
+<h1>Pick a Card</h1>
+<%= image_tag("cover1.jpg", :alt => "Card 1") %>  <%= image_tag("cover2.jpg", :alt => "Card 1") %>  <%= image_tag("cover3.jpg", :alt => "Card 1") %>
 <%= form_for @player do |f| %>
-	<h2>Bet of Player 1</h2>
-	<%= f.number_field :p1_bet %><%= f.select :p1card, [['1','1'],['2','2'],['3','3']] %>
+	<h2>Player 1</h2>
+	Bet: <%= f.number_field :p1_bet %><br>
+	Card: <%= f.select :p1card, [['1','1'],['2','2'],['3','3']] %>
 	<br/>	
-	<h2>Bet of Player 2</h2>
-	<%= f.number_field :p2_bet %><%= f.select :p2card, [['1','1'],['2','2'],['3','3']] %>
+	<h2>Player 2</h2>
+	Bet: <%= f.number_field :p2_bet %><br>
+	Card:<%= f.select :p2card, [['1','1'],['2','2'],['3','3']] %>
 	<br/>
 	<%= f.hidden_field :card1, :value => "12" %>
 	<%= f.submit 'Make bet!' %>
 <% end %>
-
-<p>Buttons: Bet!</p>
