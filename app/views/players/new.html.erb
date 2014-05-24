@@ -9,6 +9,5 @@
 	Bet: <%= f.number_field :p2_bet %><br>
 	Card:<%= f.select :p2card, [['1','1'],['2','2'],['3','3']] %>
 	<br/>
-	<%= f.hidden_field :card1, :value => "12" %>
 	<%= f.submit 'Make bet!' %>
 <% end %>
