@@ -7,6 +7,19 @@ class PlayersController < ApplicationController
 	session[:deck] = suit.product(values).shuffle!
 	@cards = []
 	@cards = session[:deck].sample(3)
+	if @cards[0].second.to_i > @cards[1].second.to_i
+			if @cards[0].second.to_i > @cards[2].second.to_i
+				@great = @cards[0]
+			else
+				@great = @cards[2]
+			end
+		elsif @cards[1].second.to_i > @cards[0].second.to_i
+			if @cards[1].second.to_i > @cards[2].second.to_i
+				@great = @cards[1]
+			else
+				@great = @cards[2]
+			end
+		end	
   end
 
   def create
