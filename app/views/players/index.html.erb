@@ -21,7 +21,7 @@ Winner: <%= @winner %>
 		<% @players.each do |player| %>
 		<tr>
 			<td>Round Number</td>
-			<td>Win</td>
+			<td>Player with <%= @great.to_s%></td>
 			<td><%= player.p1_bet %></td>
 			<td><%= player.p1card %></td>
 			<td><%= link_to 'More', player %>
