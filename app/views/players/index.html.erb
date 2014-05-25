@@ -3,6 +3,8 @@
 <% @cards.each do |face| %>
 	<%= display_image(face) %>
 <% end %>
+<br>
+Winner: <%= @winner %>
 <br/> <br/>
 <p><%= @great.to_s %></p>
 <p>Result of all rounds</p>
@@ -18,8 +20,8 @@
 	<tbody>
 		<% @players.each do |player| %>
 		<tr>
-			<td><%= player.round %></td>
-			<td>win</td>
+			<td>Round Number</td>
+			<td>Win</td>
 			<td><%= player.p1_bet %></td>
 			<td><%= player.p1card %></td>
 			<td><%= link_to 'More', player %>
